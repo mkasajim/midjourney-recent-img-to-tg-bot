@@ -11,8 +11,8 @@ from telegram.ext import Updater, CommandHandler
 import asyncio
 
 async def telegram_bot_sendimage_async(img_path):
-    bot_token = 'BOT_TOKEN'
-    bot_chatID = 'CHAT_ID'
+    bot_token = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN')
+    bot_chatID = os.getenv('CHAT_ID', 'YOUR_CHAT_ID')
     bot = Bot(token=bot_token)
 
     print(f"Sending image {img_path} to chat {bot_chatID}")
