@@ -9,12 +9,12 @@ RUN pip3 install -U pip
 
 RUN cd /
 
-RUN git clone https://github.com/mkasajim/web-to-telegram-bot
+RUN git clone https://github.com/mkasajim/midjourney-recent-img-to-tg-bot
 
-RUN cd web-to-telegram-bot
+RUN cd midjourney-recent-img-to-tg-bot
 
-WORKDIR /web-to-telegram-bot
+WORKDIR /midjourney-recent-img-to-tg-bot
 
-RUN pip3 install beautifulsoup4 lxml requests schedule
+RUN pip3 install -r requirements.txt
 
-CMD python3 website-change-tg.py
+CMD python3 main.py
